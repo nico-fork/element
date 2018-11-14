@@ -33,7 +33,7 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          preserveWhitespace: false
+          preserveWhitespace: false // template 空格处理
         }
       },
       {
