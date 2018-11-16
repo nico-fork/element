@@ -16,10 +16,11 @@ module.exports = function(config) {
         flags: ['--no-sandbox']
       }
     },
-    frameworks: ['mocha', 'sinon-chai'],
+    frameworks: ['mocha', 'sinon-chai'], // https://www.npmjs.com/package/karma-sinon-chai 配置了以后再测试js里边可以直接使用expect等函数
     reporters: ['spec', 'coverage'],
     files: ['./index.js'],
-    preprocessors: {
+    port: 9999,
+    preprocessors: { // 这里配置哪些文件需要统计测试覆盖率
       './index.js': ['webpack', 'sourcemap']
     },
     webpack: webpackConfig,
