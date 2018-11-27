@@ -133,11 +133,12 @@ const generateMiscRoutes = function(lang) {
 langs.forEach(lang => {
   route = route.concat(generateMiscRoutes(lang.lang));
 });
-
+import play from './play/index.vue';
 route.push({
   path: '/play',
   name: 'play',
-  component: require('./play/index.vue')
+  // component: require('./play/index.vue')
+  component: play
 });
 
 let userLanguage = localStorage.getItem('ELEMENT_LANGUAGE') || window.navigator.language || 'en-US';

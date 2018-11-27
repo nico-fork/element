@@ -18,7 +18,6 @@ Vue.component('main-footer', MainFooter);
 Vue.component('main-header', MainHeader);
 Vue.component('side-nav', SideNav);
 Vue.component('footer-nav', FooterNav);
-
 const router = new VueRouter({
   mode: 'hash',
   base: __dirname,
@@ -35,7 +34,6 @@ router.afterEach(route => {
   }
   document.title = 'Element';
 });
-
 new Vue({ // eslint-disable-line
   render: h => h(entry),
   router

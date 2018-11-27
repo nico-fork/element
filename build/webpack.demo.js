@@ -12,7 +12,7 @@ const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
-const isPlay = !!process.env.PLAY_ENV;
+const isPlay = !!process.env.PLAY_ENV; // 是否组件开发模式
 
 function convert(str) {
   str = str.replace(/(&#x)(\w{4});/gi, function($0) {
