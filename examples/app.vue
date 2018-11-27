@@ -176,6 +176,7 @@
   <div id="app" :class="{ 'is-component': isComponent }">
     <main-header v-if="lang !== 'play'"></main-header>
     <div class="main-cnt">
+      <button class="e_dis">按钮</button>
       <router-view></router-view>
     </div>
     <main-footer v-if="lang !== 'play' && !isComponent"></main-footer>
