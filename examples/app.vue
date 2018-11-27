@@ -2,7 +2,6 @@
   @import 'highlight.js/styles/color-brewer.css';
   @import 'assets/styles/common.css';
   @import 'assets/styles/fonts/style.css';
-  @import 'assets/styles/all.css';
   html, body {
     margin: 0;
     padding: 0;
@@ -175,7 +174,6 @@
 
 <template>
   <div id="app" :class="{ 'is-component': isComponent }">
-    <input type="checkbox" />
     <main-header v-if="lang !== 'play'"></main-header>
     <div class="main-cnt">
       <router-view></router-view>
