@@ -137,7 +137,7 @@ langs.forEach(lang => {
 route.push({
   path: '/play',
   name: 'play',
-  component: require('./play/index.vue')
+  component: require('./play/index.vue').default
 });
 
 let userLanguage = localStorage.getItem('ELEMENT_LANGUAGE') || window.navigator.language || 'en-US';
@@ -147,7 +147,7 @@ if (userLanguage.indexOf('zh-') !== -1) {
 } else if (userLanguage.indexOf('es') !== -1) {
   defaultPath = '/es';
 }
-
+defaultPath = '/play';
 route = route.concat([{
   path: '/',
   redirect: defaultPath
@@ -155,5 +155,5 @@ route = route.concat([{
   path: '*',
   redirect: defaultPath
 }]);
-
+console.log(route);
 export default route;
