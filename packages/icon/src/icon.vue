@@ -1,13 +1,16 @@
 <template>
-  <i :class="'el-icon-' + name"></i>
+  <span :class="['e_ico-' + name,pic?'e_ico-pic-'+ pic : '']"><slot v-if="$slots"></slot></span>
 </template>
 
 <script>
   export default {
-    name: 'ElIcon',
-
+    name: 'TIcon',
     props: {
-      name: String
+      name: String,
+      pic: String
+    },
+    mounted () {
+      console.log(this.$slots);
     }
   };
 </script>

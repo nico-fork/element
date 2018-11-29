@@ -3,7 +3,7 @@ import entry from './app';
 import VueRouter from 'vue-router';
 import Element from 'main/index.js';
 import 'packages/theme-chalk/src/index.scss';
-import './assets/styles/base.css';
+// import './assets/styles/base.css';
 import routes from './route.config';
 import demoBlock from './components/demo-block.vue';
 import MainFooter from './components/footer.vue';
@@ -34,7 +34,7 @@ router.afterEach(route => {
       return;
     }
   }
-  document.title = 'Element';
+  document.title = 'touchui-vue';
 });
 
 new Vue({ // eslint-disable-line
